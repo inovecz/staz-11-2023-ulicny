@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Client as ClientModel;
 use App\Models\Request as RequestModel;
-
+use App\Models\Tenant as TenantModel;
 class RequestsController extends Controller
 {
     public function index()
@@ -16,8 +17,10 @@ class RequestsController extends Controller
     public function view($id) {
 
         $request = RequestModel::where('id',$id)->first();
-        return view('requests.view', ['request' => $request]);
-
+        $client = ClientModel::where('id',$id)->first();
+        $tenant = TenantModel::where('id',$id)->first();
+        return view('requests.view', ['request' => $request, 'client' => $client, 'tenant'=>$tenant  ]);
+        
 
     }
 

@@ -55,13 +55,12 @@
        <img src="https://cdn-icons-png.flaticon.com/512/6009/6009978.png" alt="avatar" class="rounded-circle d-flex align-self-start me-3 shadow-1-strong" width="60">
         <div class="card mask-custom">
           <div class="card-header d-flex justify-content-between p-3" style="border-bottom: 1px solid rgba(255,255,255,.3);">
-             <p class="fw-bold mb-0">{{ $client->name }}</p>
+             <p class="fw-bold mb-0"><img src="image source" class="img-fluid rounded-top" alt="">{{ $client->id.'-'.$client->name }}</p>
               <p class="text-light small mb-0"><i class="far fa-clock"></i> 12 mins ago</p>
            </div>
             <div class="card-body">
                   <p class="mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua.
+                    Tu bude request_message
                   </p>
                 </div>
               </div>
@@ -72,13 +71,12 @@
               <div class="card mask-custom w-100">
                 <div class="card-header d-flex justify-content-between p-3"
                   style="border-bottom: 1px solid rgba(255,255,255,.3);">
-                  <p class="fw-bold mb-0">Lara Croft</p>
+                  <p class="fw-bold mb-0">id-{{ $tenant->id.'-'.$tenant->firm_name }}</p>
                   <p class="text-light small mb-0"><i class="far fa-clock"></i> 13 mins ago</p>
                 </div>
                 <div class="card-body">
                   <p class="mb-0">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                    laudantium.
+                    Tu bude request message od tenanta, a tak dalej a dalej
                   </p>
                 </div>
               </div>
